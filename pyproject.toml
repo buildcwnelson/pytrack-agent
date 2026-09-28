@@ -1,0 +1,33 @@
+[project]
+name = "pytrack"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "buildcwnelson", email = "buildcwnelson@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "agno>=3.0.11",
+    "arize-phoenix>=20.16.0",
+    "networkx>=3.7",
+    "ollama>=0.6.2",
+    "opentelemetry-api>=1.45.0",
+    "opentelemetry-exporter-otlp>=1.45.0",
+    "opentelemetry-sdk>=1.45.0",
+    "pydantic>=2.13.5",
+    "rich>=15.0.0",
+    "typer>=0.27.2",
+]
+
+[project.scripts]
+pytrack = "pytrack:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
